@@ -1,0 +1,42 @@
+{
+  "name": "chub-fb-poc",
+  "version": "1.0.0",
+  "description": "Copyright Hub Facebook PoC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./lib/server.js",
+    "test": "mocha",
+    "cov": "mocha -r blanket -R html-cov > coverage.html"
+  },
+  "author": "James Birmingham",
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest",
+    "jade": "latest",
+    "passport": "latest",
+    "express-validator": "latest",
+    "passport-facebook-canvas": "latest",
+    "handlebars": "latest",
+    "validator": "latest",
+    "pem": "latest",
+    "config": "latest",
+    "cookie-parser": "latest",
+    "body-parser": "latest",
+    "express-session": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "xunit-file": "latest",
+    "should": "latest",
+    "zombie": "latest",
+    "cucumber": "latest",
+    "blanket": "latest",
+    "sinon": "latest",
+    "request": "latest"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "lib"
+    }
+  }
+}

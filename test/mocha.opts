@@ -1,0 +1,7 @@
+--require blanket
+--require should
+--reporter spec
+--ui bdd
+--colors
+--recursive
+

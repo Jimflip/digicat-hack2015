@@ -1,23 +1,80 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
 .item {
     width: 100px;
     height: 100px;
     background-position: 50% 50%;
     background-size: cover;
+    float: left;
+    margin: 2px;
+    position: relative;
+}
+.button-edit {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-image: url("../images/icon-none.svg");
 }
 
-.icon {
-	width: 25px;
-	height: 25px;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: contain;
+.menu {
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    width: 170px;
+    background: #fff;
+    z-index: 999;
+    border: 1px solid #777;
+    padding: 5px;
+    text-align: center;
+    font-size: 13px;
 }
-.icon-green {
-	background-image: url("../images/icon-green.svg");
+.menu h1 {
+    font-size: 17px;
 }
-.icon-amber {
-	background-image: url("../images/icon-amber.svg");
+.menu li {
+    position: relative;
+    padding: 5px 0;
 }
-.icon-red {
-	background-image: url("../images/icon-red.svg");
+.menu li:after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid #777;
+    width: 100px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 35px;
 }
+.menu a {
+    display: block;
+    padding: 3px 0;
+}
+.menu a:hover {
+    color:#fff;
+    background-color: rgb(59,89,152);
+}
+
+.option-0 .button-edit {background-image: url("../images/icon-default.svg");}
+
+.option-1 .button-edit {background-image: url("../images/icon-green.svg");}
+.option-1 .menu ul li:nth-child(1) a:before {content: "✓ ";}
+
+.option-2 .button-edit {background-image: url("../images/icon-amber.svg");}
+.option-2 .menu ul li:nth-child(2) a:before  {content: "✓ ";}
+
+.option-3 .button-edit {background-image: url("../images/icon-red.svg");}
+.option-3 .menu ul li:nth-child(3) a:before {content: "✓ ";}
+

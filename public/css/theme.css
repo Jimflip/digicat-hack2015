@@ -8,8 +8,8 @@ body {
     text-decoration: none;
 }
 .item {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-position: 50% 50%;
     background-size: cover;
     float: left;

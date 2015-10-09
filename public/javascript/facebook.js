@@ -43,6 +43,7 @@ window.fbAsyncInit = function ()
 			e.preventDefault();
 			$(this).closest('.item').removeClass('option-0').removeClass('option-1').removeClass('option-2').removeClass('option-3').addClass($(this).attr('data-val'));
 			$menus.hide();
+			postMessage();
 		});
 	}
 
@@ -159,7 +160,7 @@ window.fbAsyncInit = function ()
 					{
 						renderPhotos(photo_urls);
 						initEdit();
-						postMessage();
+						//postMessage();
 					});
 				});
 			});

@@ -58,11 +58,8 @@ window.fbAsyncInit = function ()
 		setTimeout(function () {
 			$('#overlay').fadeOut();
 
-			showShareModal();
+			postMessage();
 		},1000);
-	}
-	function showShareModal() {
-		alert('SHARE!');
 	}
 
 	function fetchPhotoUrls(photo_ids, callback)
@@ -178,7 +175,7 @@ window.fbAsyncInit = function ()
 					{
 						renderPhotos(photo_urls);
 						initEdit();
-						postMessage();
+						//postMessage();
 					});
 				});
 			});

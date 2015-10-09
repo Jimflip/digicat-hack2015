@@ -25,7 +25,7 @@ window.fbAsyncInit = function ()
 	{
 		var batch = [];
 
-		for (var i = 0; i < photo_ids.length; i++)
+		for (var i = 0; i < photo_ids.length && i < 50; i++)
 		{
 			batch.push({method: 'GET', relative_url: photo_ids[i] + '?fields=picture'});
 		}
@@ -49,7 +49,7 @@ window.fbAsyncInit = function ()
 	{
 		var batch = [];
 
-		for (var i = 0; i < albums.data.length; i++)
+		for (var i = 0; i < albums.data.length && i < 50; i++)
 		{
 			batch.push({method: 'GET', relative_url: albums.data[i].id + '/photos'});
 		}
@@ -103,8 +103,21 @@ window.fbAsyncInit = function ()
 	{
 		FB.ui({
 			method: 'share',
-			href: 'https://apps.facebook.com/miphotoz'
+			href: 'https://apps.facebook.com/miphotoz',
+			message:"awesome"
 		}, function (response) {});
+/*
+		FB.ui({
+			method: 'share_open_graph',
+			action_type: 'og.likes',
+			message: "awesome",
+			action_properties: JSON.stringify({
+				description: 'wibble wobble',
+				title: "yay it works",
+				object:'https://apps.facebook.com/miphotoz'
+			})
+		}, function(response){});
+		*/
 	}
 
 	function loadPage()

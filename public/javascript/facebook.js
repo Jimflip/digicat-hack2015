@@ -35,12 +35,14 @@ window.fbAsyncInit = function ()
 
 		$('.button-edit').on('click', function (e) {
 			e.preventDefault();
+			e.stopPropagation();
 			$menus.hide();
 			$(this).next().show();
 		});
 
 		$('.menu').on('click', 'a', function (e) {
 			e.preventDefault();
+			e.stopPropagation();
 			$(this).closest('.item').removeClass('option-0').removeClass('option-1').removeClass('option-2').removeClass('option-3').addClass($(this).attr('data-val'));
 			$menus.hide();
 
@@ -51,6 +53,10 @@ window.fbAsyncInit = function ()
 			e.preventDefault();
 			$('body').attr('class','').addClass($(this).attr('data-val'));
 		});
+
+		$(document).on('click', function(){
+			$menus.hide();
+		})
 	}
 	function showModal() {
 		$('#overlay').fadeIn();

@@ -19,7 +19,7 @@ window.fbAsyncInit = function ()
 			ele += '<div class="menu" style="display: none">';
 			ele += '<h1>Where can your photo be used?</h1>';
 			ele += '<ul>';
-			ele += '<li><a href="#" data-val="option-1">Nowhere out of FB</a></li>';
+			ele += '<li><a href="#" data-val="option-1">Only on FB</a></li>';
 			ele += '<li><a href="#" data-val="option-2">Restricted</a></li>';
 			ele += '<li><a href="#" data-val="option-3">Anywhere</a></li>';
 			ele += '</ul>';

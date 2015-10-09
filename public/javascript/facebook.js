@@ -194,6 +194,10 @@ window.fbAsyncInit = function ()
 		{
 			loadPage();
 		}
+		else
+		{
+			console.dir("BUGGGGGGGGGGGGGGGGERRRRRRR!")
+		}
 	}
 
 	FB.getLoginStatus(function (response)

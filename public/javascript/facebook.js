@@ -59,7 +59,7 @@ window.fbAsyncInit = function ()
 			$('#overlay').fadeOut();
 
 			postMessage();
-		},1000);
+		},2000);
 	}
 
 	function fetchPhotoUrls(photo_ids, callback)

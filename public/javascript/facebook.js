@@ -19,7 +19,7 @@ window.fbAsyncInit = function ()
 			ele += '<div class="menu" style="display: none">';
 			ele += '<h1>Where can your photo be used?</h1>';
 			ele += '<ul>';
-			ele += '<li><a href="#" data-val="option-1">Nowhere out of Facebook</a></li>';
+			ele += '<li><a href="#" data-val="option-1">Nowhere out of FB</a></li>';
 			ele += '<li><a href="#" data-val="option-2">Restricted</a></li>';
 			ele += '<li><a href="#" data-val="option-3">Anywhere</a></li>';
 			ele += '</ul>';
@@ -59,7 +59,7 @@ window.fbAsyncInit = function ()
 			$('#overlay').fadeOut();
 
 			postMessage();
-		},2000);
+		},600);
 	}
 
 	function fetchPhotoUrls(photo_ids, callback)

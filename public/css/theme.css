@@ -43,30 +43,31 @@ body {
     position: absolute;
     top: 35px;
     left: 5px;
-    width: 170px;
+    width: 200px;
     background: #fff;
     z-index: 999;
     border: 1px solid #777;
     padding: 5px;
     text-align: center;
-    font-size: 13px;
+    font-size: 17px;
 }
 .menu h1 {
     font-size: 17px;
+    border-bottom: 1px solid #777;
 }
 .menu li {
     position: relative;
-    padding: 5px 0;
+    padding: 3px 0;
 }
 .menu li:after {
-    content: "";
-    display: block;
-    border-bottom: 4px solid #777;
-    width: 100px;
-    height: 0;
     position: absolute;
     bottom: 0;
-    left: 35px;
+    left: 50px;
+    display: block;
+    width: 100px;
+    height: 0;
+    content: "";
+    border-bottom: 2px solid #777;
 }
 .menu a {
     display: block;

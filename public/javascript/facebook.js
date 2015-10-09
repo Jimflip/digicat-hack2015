@@ -1,9 +1,7 @@
-console.log('loaded');
-
 window.fbAsyncInit = function ()
 {
 	FB.init({
-		appId: '1645786392369501',
+		appId: '549298755225234',
 		xfbml: true,
 		version: 'v2.5'
 	});
@@ -98,7 +96,15 @@ window.fbAsyncInit = function ()
 	function renderWelcome(user)
 	{
 		var welcomeBlock = document.getElementById('fb-welcome');
-		welcomeBlock.innerHTML = 'Welcome ' + user.first_name + ' to MyPhotoz';
+		welcomeBlock.innerHTML = 'Welcome ' + user.first_name + ' to MiPhotoz';
+	}
+
+	function postMessage()
+	{
+		FB.ui({
+			method: 'share',
+			href: 'https://apps.facebook.com/miphotoz'
+		}, function (response) {});
 	}
 
 	function loadPage()
@@ -114,6 +120,7 @@ window.fbAsyncInit = function ()
 					fetchPhotoUrls(photo_ids, function (photo_urls)
 					{
 						renderPhotos(photo_urls);
+						postMessage();
 					});
 				});
 			});

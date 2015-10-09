@@ -46,6 +46,11 @@ window.fbAsyncInit = function ()
 
 			showModal();
 		});
+
+		$('nav').on('click', 'a', function (e) {
+			e.preventDefault();
+			$('body').attr('class','').addClass($(this).attr('data-val'));
+		});
 	}
 	function showModal() {
 		$('#overlay').fadeIn();

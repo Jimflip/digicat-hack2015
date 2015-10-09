@@ -7,15 +7,26 @@
     <meta property="og:image:secure_url" content="images/logo.png" />
 </header>
 <body>
+<div id="page-wrapper">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="javascript/facebook.js"></script>
 
-    <h1 style="text-align: center" id="fb-welcome"></h1>
+    <header id="header">
+        <h1 style="text-align: center" id="fb-welcome"></h1>
+    </header>
+
+    <nav>
+        <a href="#" data-val="show-all">All photos</a>
+        <a href="#" data-val="show-0">NOT SET</a>
+        <a href="#" data-val="show-1">GREEN</a>
+        <a href="#" data-val="show-2">AMBER</a>
+        <a href="#" data-val="show-3">RED</a>
+    </nav>
 
     <div id="photo-container">
     </div>
 
     <div id="overlay"></div>
-
+</div>
 </body>
 </html>

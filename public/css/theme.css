@@ -7,6 +7,15 @@ body {
     list-style: none;
     text-decoration: none;
 }
+#header {
+    background: url(../images/logo.svg) no-repeat 10px 50%;
+    font-size: 15px;
+    line-height: 50px;
+}
+#page-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
 .item {
     width: 100px;
     height: 100px;
@@ -15,6 +24,7 @@ body {
     float: left;
     margin: 2px;
     position: relative;
+    transition: all 2s linear;
 }
 .button-edit {
     display: block;
@@ -88,4 +98,42 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.show-0 .item,
+.show-1 .item,
+.show-2 .item,
+.show-3 .item {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.show-0 .option-0,
+.show-1 .option-1,
+.show-2 .option-2,
+.show-3 .option-3
+ {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    overflow: visible;
+}
+
+
+nav {
+    display: table;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+nav a {
+    display: table-cell;
+    width: 20%;
+    padding: 5px;
+    border-right: 1px solid #777;
+}
+nav a:last-child {
+    border-right: 0;
 }

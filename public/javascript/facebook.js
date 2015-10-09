@@ -12,13 +12,38 @@ window.fbAsyncInit = function ()
 
 		for (var i = 0; i < urls.length; i++)
 		{
-			var ele = document.createElement("img");
+			var ele = '';// document.createElement("img");
 
-			ele.src = urls[i];
-			ele.className = "photo";
+			ele += '<div class="item option-' + (i%4) +'" style="background-image: url(' + urls[i] + ');">';
+			ele += '<a href="#" class="button-edit"></a>';
+			ele += '<div class="menu" style="display: none">';
+			ele += '<h1>Where can your photo be used?</h1>';
+			ele += '<ul>';
+			ele += '<li><a href="#" data-val="option-1">Nowhere out of Facebook</a></li>';
+			ele += '<li><a href="#" data-val="option-2">Restricted</a></li>';
+			ele += '<li><a href="#" data-val="option-3">Anywhere</a></li>';
+			ele += '</ul>';
+			ele += '</div>';
+			ele += '</div>';
 
-			parent.appendChild(ele)
+			$(parent).append(ele);
 		}
+	}
+
+	function initEdit() {
+		var $menus = $('.menu');
+
+		$('.button-edit').on('click', function (e) {
+			e.preventDefault();
+			$menus.hide();
+			$(this).next().show();
+		});
+
+		$('.menu').on('click', 'a', function (e) {
+			e.preventDefault();
+			$(this).closest('.item').removeClass('option-0').removeClass('option-1').removeClass('option-2').removeClass('option-3').addClass($(this).attr('data-val'));
+			$menus.hide();
+		});
 	}
 
 	function fetchPhotoUrls(photo_ids, callback)
@@ -133,6 +158,7 @@ window.fbAsyncInit = function ()
 					fetchPhotoUrls(photo_ids, function (photo_urls)
 					{
 						renderPhotos(photo_urls);
+						initEdit();
 						postMessage();
 					});
 				});

@@ -43,8 +43,21 @@ window.fbAsyncInit = function ()
 			e.preventDefault();
 			$(this).closest('.item').removeClass('option-0').removeClass('option-1').removeClass('option-2').removeClass('option-3').addClass($(this).attr('data-val'));
 			$menus.hide();
-			postMessage();
+
+			showModal();
 		});
+	}
+	function showModal() {
+		$('#overlay').fadeIn();
+
+		setTimeout(function () {
+			$('#overlay').fadeOut();
+
+			showShareModal();
+		},1000);
+	}
+	function showShareModal() {
+		alert('SHARE!');
 	}
 
 	function fetchPhotoUrls(photo_ids, callback)

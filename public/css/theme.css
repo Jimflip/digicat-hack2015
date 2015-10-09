@@ -1,3 +1,20 @@
 .photo {
     padding: 5px;
 }
+
+.icon {
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;
+}
+.icon-green {
+	background-image: url("../images/icon-green.svg");
+}
+.icon-amber {
+	background-image: url("../images/icon-amber.svg");
+}
+.icon-red {
+	background-image: url("../images/icon-red.svg");
+}
